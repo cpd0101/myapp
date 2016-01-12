@@ -3,14 +3,13 @@
  * @author tanshaohui <tanshaohui@baidu.com>
  * @date 2016-01-11 12:13:58
  * @last-modified-by tanshaohui
- * @last-modified-time 2016-01-11 21:05:13
+ * @last-modified-time 2016-01-12 20:47:14
  */
 
 var express = require('express');
 var router = express.Router();
 
-/* GET users listing. */
-router.get('/admin', function(req, res, next) {
+router.get('/admin', function (req, res, next) {
     if (req.session.uname) {
         res.redirect('/system/home');
     } else {
@@ -18,7 +17,7 @@ router.get('/admin', function(req, res, next) {
     }
 });
 
-router.get('/home', function(req, res, next) {
+router.get('/home', function (req, res, next) {
     if (req.session.uname) {
         res.render('system/home', {
             title: '管理平台-首页',

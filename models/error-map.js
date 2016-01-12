@@ -3,7 +3,7 @@
  * @author tanshaohui <tanshaohui@baidu.com>
  * @date 2016-01-11 17:43:24
  * @last-modified-by tanshaohui
- * @last-modified-time 2016-01-12 12:47:10
+ * @last-modified-time 2016-01-12 21:27:36
  */
 
 var map = {
@@ -26,6 +26,10 @@ var map = {
     passwdIncorrectOver: {
         errno: 4,
         msg: '您今天密码输入错误次数过多，请您在24小时后进行重试'
+    },
+    unlogin: {
+        errno: 5,
+        msg: '未登录'
     }
 };
 

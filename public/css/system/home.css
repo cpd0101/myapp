@@ -1,0 +1,18 @@
+/* 
+* @Author: tanshaohui
+* @Date:   2016-01-12 19:21:19
+* @Last Modified by:   tanshaohui
+* @Last Modified time: 2016-01-12 21:10:31
+*/
+
+.ufile {
+    line-height: normal;
+    font-size: 12px;
+}
+
+.pic-preview {
+    width: 32px;
+    height: 32px;
+    background-size: cover;
+    background-position: center;
+}

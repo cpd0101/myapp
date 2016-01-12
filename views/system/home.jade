@@ -1,4 +1,9 @@
 extends layout
 
+block head
+  link(rel='stylesheet', href='/static/css/system/home.css')
+
 block content
-    h1= uname
+    input(type='file' name='ufile' accept='image/*')#ufile.ufile
+    #pic-preview.pic-preview
+    script(type='text/javascript', src='/static/js/system/home.js')
