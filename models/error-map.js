@@ -3,7 +3,7 @@
  * @author tanshaohui <tanshaohui@baidu.com>
  * @date 2016-01-11 17:43:24
  * @last-modified-by tanshaohui
- * @last-modified-time 2016-01-12 21:27:36
+ * @last-modified-time 2016-01-12 21:54:09
  */
 
 var map = {
@@ -30,6 +30,10 @@ var map = {
     unlogin: {
         errno: 5,
         msg: '未登录'
+    },
+    uploadFail: {
+        errno: 6,
+        msg: '上传失败'
     }
 };
 
