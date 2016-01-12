@@ -1,0 +1,39 @@
+/* 
+* @Author: tanshaohui
+* @Date:   2016-01-11 15:24:20
+* @Last Modified by:   tanshaohui
+* @Last Modified time: 2016-01-11 16:56:54
+*/
+
+html, body {
+    height: 100%;
+}
+
+.login-container {
+    position: relative;
+    width: 320px;
+    top: 50%;
+    margin: -120px auto 0;
+}
+
+.login-container .login-title {
+    margin-bottom: 30px;
+}
+
+.login-container .login-group {
+    position: relative;
+}
+
+.login-container .login-label {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    margin: 0;
+    text-align: center;
+    border-right: 1px solid #ccc;
+}
+
+.login-container .login-control {
+    padding-left: 40px;
+}

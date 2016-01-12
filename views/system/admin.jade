@@ -1,0 +1,19 @@
+extends layout
+
+block head
+  link(rel='stylesheet', href='/static/css/system/admin.css')
+
+block content
+  .container.login-container
+    h4.text-center.login-title 管理平台-登录
+    form
+      .form-group.login-group
+        label(for='uname').glyphicon.glyphicon-user.login-label
+        input(type='text', name='uname', autofocus='autofocus', placeholder='请输入用户名')#uname.form-control.login-control
+      .form-group.login-group
+        label(for='password').glyphicon.glyphicon-lock.login-label
+        input(type='password', name='password', placeholder='请输入密码')#password.form-control.login-control
+      .form-group
+        input(type='submit', value='登录')#login.btn.btn-success.form-control
+      div(role='alert').alert
+  script(type='text/javascript', src='/static/js/system/admin.js')
