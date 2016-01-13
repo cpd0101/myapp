@@ -3,7 +3,7 @@
  * @author tanshaohui <tanshaohui@baidu.com>
  * @date 2016-01-12 19:31:54
  * @last-modified-by tanshaohui
- * @last-modified-time 2016-01-13 10:06:23
+ * @last-modified-time 2016-01-13 13:07:50
  */
 
 $('#ufile').on('change', function (e) {

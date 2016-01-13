@@ -3,14 +3,15 @@
  * @author tanshaohui <tanshaohui@baidu.com>
  * @date 2016-01-11 17:04:17
  * @last-modified-by tanshaohui
- * @last-modified-time 2016-01-13 10:48:39
+ * @last-modified-time 2016-01-13 13:05:05
  */
 
 var express = require('express');
 var router = express.Router();
+var formidable = require('formidable');
 var errorMap = require('../../models/error-map.js');
 var adminUser = require('../../models/mysql/admin-user.js');
-var formidable = require('formidable');
+var userActive = require('../../logic/email/user-active.js');
 
 router.post('/auth/*', function (req, res, next) {
     if (req.session.uname) {
@@ -37,6 +38,17 @@ router.post('/auth/upload', function (req, res, next) {
             Object.assign(result, errorMap.uploadFail);
         }
         res.json(result);
+    });
+});
+
+router.post('/user/active', function (req, res, next) {
+    userActive.do(['pidan621@126.com', '753164006@qq.com'], function (err, info) {
+        if (err) {
+            res.json(errorMap.activeUserFail);
+        } else {
+            Object.assign(info, errorMap.success);
+            res.json(info);
+        }
     });
 });
 
