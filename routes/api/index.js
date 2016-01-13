@@ -3,7 +3,7 @@
  * @author tanshaohui <tanshaohui@baidu.com>
  * @date 2016-01-11 17:04:17
  * @last-modified-by tanshaohui
- * @last-modified-time 2016-01-12 22:00:43
+ * @last-modified-time 2016-01-13 10:48:39
  */
 
 var express = require('express');
@@ -12,12 +12,15 @@ var errorMap = require('../../models/error-map.js');
 var adminUser = require('../../models/mysql/admin-user.js');
 var formidable = require('formidable');
 
-router.post('/upload', function (req, res, next) {
-    if (!req.session.uname) {
-        var result = {url: ''};
-        Object.assign(result, errorMap.unlogin);
-        return res.json(result);
+router.post('/auth/*', function (req, res, next) {
+    if (req.session.uname) {
+        next();
+    } else {
+        res.json(errorMap.unlogin);
     }
+});
+
+router.post('/auth/upload', function (req, res, next) {
     var form = new formidable.IncomingForm();   // 创建上传表单
     form.encoding = 'utf-8';        // 设置编辑
     form.uploadDir = 'public/ufile';    // 设置上传目录

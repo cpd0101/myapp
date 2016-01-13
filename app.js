@@ -1,4 +1,5 @@
 var express = require('express');
+var fs = require('fs');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -64,5 +65,10 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
+
+var uploadDir = path.join(__dirname, 'public/ufile');
+if (!fs.existsSync(uploadDir)) {
+  fs.mkdirSync(uploadDir);
+}
 
 module.exports = app;

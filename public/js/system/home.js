@@ -3,7 +3,7 @@
  * @author tanshaohui <tanshaohui@baidu.com>
  * @date 2016-01-12 19:31:54
  * @last-modified-by tanshaohui
- * @last-modified-time 2016-01-12 21:21:32
+ * @last-modified-time 2016-01-13 10:06:23
  */
 
 $('#ufile').on('change', function (e) {
@@ -13,7 +13,7 @@ $('#ufile').on('change', function (e) {
         data.append('ufile', files[0]);
     }
     $.ajax({
-        url:'/api/upload',
+        url:'/api/auth/upload',
         type: 'post',             
         data: data,
         dataType: 'json',
@@ -27,7 +27,7 @@ $('#ufile').on('change', function (e) {
             } else {
                 $('#pic-preview').css({
                     backgroundImage: 'none'
-                }).text('上传失败');
+                }).text(data.msg);
             }
         }
     });
